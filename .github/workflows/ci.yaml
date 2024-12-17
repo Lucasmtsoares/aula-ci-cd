@@ -26,3 +26,6 @@ jobs:
             - name: install dependencies
               run: yarn
 
+            - name: Running Tests
+              run: yarn test
+
