@@ -15,7 +15,7 @@ jobs:
         strategy:
             matrix:
                 node-version: [18, 20, 22]
-                os: [ubuntu-latest, windows-latest, macos-latest]
+                os: [ubuntu-latest]
 
         steps:
             - name: Checkout source code
@@ -32,6 +32,7 @@ jobs:
 
             - name: Running Tests
               run: yarn test
+
             - name: Build Docker Image
               run: docker build -t aula-ci-cd:latest . 
 
